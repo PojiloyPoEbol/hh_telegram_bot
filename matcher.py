@@ -108,24 +108,3 @@ class VacancyMatcher:
         return recommendations
 
 
-# Пример использования
-if __name__ == "__main__":
-    db_params = {
-        'host': 'localhost',
-        'database': 'postgres',
-        'user': 'postgres',
-        'password': 'Scpsosat2023'
-    }
-
-    matcher = VacancyMatcher(db_params)
-
-    # Получить рекомендации для студента с ID = 2
-    recommendations = matcher.recommend_vacancies('Влад Абдрахманов')
-
-    print("Рекомендованные вакансии:")
-    for vac in recommendations:
-        print(f"\n{vac['title']} в {vac['company']} ({vac['location']})\n"
-              f"Совпадение навыков: {vac['match_score']}\n"
-              f"Требуемые навыки: {vac['required_skills']}")
-        print(f"Ссылка: {vac['link']}")
-        print('-------------------------------------------------------')
