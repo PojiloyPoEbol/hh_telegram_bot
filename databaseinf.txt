@@ -1,1 +1,1 @@
-postgres:Scpsosat2023
+your_BD_name:your_BD_password
