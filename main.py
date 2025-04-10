@@ -106,7 +106,7 @@ business_roles = [
     "Веб разработчик"
 ]
 
-token = '6245990553:AAH01AzKaW2XAnjs2HjOpqZM9i1rSeGRnV0'
+token = 'your_token'
 
 bot = telebot.TeleBot(token)
 
@@ -320,19 +320,19 @@ def message_search(message):
     DELETE FROM si.vacancies
     WHERE vacancy_id IN (SELECT vacancy_id FROM CTE_duplicates WHERE row_number > 1);
     """)
-
+# insert your parameters
     db_params = {
-        'host': 'localhost',
-        'database': 'postgres',
-        'user': 'postgres',
-        'password': 'Scpsosat2023'
+        'host': '',
+        'database': '',
+        'user': '',
+        'password': ''
     }
-
+# insert your parameters here too
     conn = psycopg2.connect(
-        dbname="postgres",
-        user="postgres",
-        password="Scpsosat2023",
-        host="localhost"
+        dbname="",
+        user="",
+        password="",
+        host=""
     )
 
 
